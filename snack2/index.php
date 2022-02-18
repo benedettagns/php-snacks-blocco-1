@@ -5,7 +5,7 @@ $age = $_GET['age'];
 
 //validità nome
 if (strlen($name) < 3 ) {
-    echo 'Il nome deve essere più lungo di 3 caratteri';
+    echo 'Il nome deve essere più lungo di 3 caratteri'.'<br/>';
 } else {
     echo 'Il nome è valido'.'<br/>';
 };
@@ -18,7 +18,12 @@ else {
     echo 'L\'email non è valida'.'<br>';
 }
 
-
+//validità età
+if(filter_var($age, FILTER_VALIDATE_INT)) {
+    echo 'L\'età è valida'.'<br/>';
+} else {
+    echo 'L\'età non è valida'.'<br/>';
+};
 ?>
 
 <!DOCTYPE html>
