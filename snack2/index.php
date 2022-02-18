@@ -1,14 +1,23 @@
 <?php
-
 $name = $_GET['name'];
 $email = $_GET['email'];
 $age = $_GET['age'];
 
+//validità nome
 if (strlen($name) < 3 ) {
     echo 'Il nome deve essere più lungo di 3 caratteri';
 } else {
-    echo 'Il nome è valido';
+    echo 'Il nome è valido'.'<br/>';
 };
+
+//validità email
+if(filter_var($email, FILTER_VALIDATE_EMAIL)) {
+    echo 'L\'email è valida'.'<br>';
+}
+else {
+    echo 'L\'email non è valida'.'<br>';
+}
+
 
 ?>
 
