@@ -3,15 +3,17 @@
 $numeriNecessari = 15;
 $arrayRandom = [];
 
-for ($i = 0; $i < $numeriNecessari; $i++) {
-    echo $random = rand(1, 100);;
-    
+while (count($arrayRandom) < $numeriNecessari) {
+    $random = rand(1,100);
+    echo "<p>" . $random . "</p>";
+
     if(!in_array($random, $arrayRandom)) {
         $arrayRandom[] = $random;
-    }
-}
+    };
+};
 
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
